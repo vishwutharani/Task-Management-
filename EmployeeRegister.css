@@ -1,0 +1,185 @@
+.register-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6);
+    animation: gradientBG 10s ease infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.register-box {
+    width: 520px;              /* same as admin */
+    padding: 55px 50px;        /* same as admin */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    animation: fadeUp 0.8s ease forwards;
+    box-sizing: border-box;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.register-box h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #1e293b;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.register-box h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+.register-box h2 {
+    text-align: center;
+    color: #1e293b;
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.register-box p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* ----- Inputs ----- */
+.register-box input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+    color: #1e293b;
+    box-sizing: border-box;
+}
+
+.register-box input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    background: white;
+}
+
+/* ----- Password wrapper ----- */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 14px 50px 14px 16px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+.password-toggle:hover {
+    color: #1e293b;
+}
+
+.password-toggle svg {
+    display: block;
+}
+
+/* ----- Register button ----- */
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+}
+
+.register-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+    background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+.register-btn:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+.register-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ----- Back to login link ----- */
+.back-to-login {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-to-login:hover {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: #2563eb;
+    transform: scale(1.05);
+    text-decoration: none;
+}

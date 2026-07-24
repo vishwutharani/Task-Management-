@@ -1,0 +1,44 @@
+.navbar {
+  background: #ffffff;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-left h2 {
+  margin: 0;
+  color: #0b1e33;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-badge {
+  background: #eef2ff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.logout-btn:hover {
+  background: #dc2626;
+  transform: scale(1.02);
+}
